@@ -1,3 +1,9 @@
+//----------------------------------------------------------------------
+//這個演算法是二分搜尋法（Binary Search）的一個例子，
+//它用於在已排序的數組中快速查找一個特定的元素。這種方法比線性搜尋更高效，
+//特別是在處理大型數據時。二分搜尋的基本思想是將搜尋範圍分成兩半，
+//然後根據中間元素與目標值的比較結果來決定接下來搜尋的半邊。
+
 let numbers = [
   9,
   12,
@@ -108,7 +114,7 @@ function binarySearch(arr, n) {
 
   while (min <= max) {
     step++;
-    let middle = Math.floor((max + min) / 2);
+    let middle = Math.floor((max + min) / 2); //Math.floor 用於將一個給定的數字「向下取整」
     if (n > arr[middle]) {
       min = middle + 1;
     } else if (n < arr[middle]) {
@@ -123,5 +129,6 @@ function binarySearch(arr, n) {
   console.log("Cannot find number " + n);
   return -1;
 }
+
 
 binarySearch(numbers, 298); // 6 - 7

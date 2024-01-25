@@ -1,3 +1,24 @@
+//----------------------------------------------------------
+//這個演算法是用來判斷兩個字符串是否具有相同的字符頻率。換句話說，
+//它檢查兩個字符串中每個字符出現的次數是否一致。這種演算法在某些情境下非常有用，
+//比如在解決一些字符串處理問題或某些類型的加密學問題。
+
+//下面是一些簡單的例子來解釋這個演算法：
+
+// 【例子 1】: sameFrequency("aabc", "abbc")
+// str1 ("aabc") 中 'a' 出現了 2 次，'b' 出現了 1 次，'c' 出現了 1 次。
+// str2 ("abbc") 中 'a' 出現了 1 次，'b' 出現了 2 次，'c' 出現了 1 次。
+// 因為 'a' 和 'b' 的出現次數不同，所以返回 false。
+
+
+// 【例子 2】: sameFrequency("abc", "cab")
+// str1 ("abc") 中每個字符都只出現了 1 次。
+// str2 ("cab") 中每個字符也都只出現了 1 次。
+// 所有字符的出現次數都相同，所以返回 true。
+
+// 這個算法很適合用 dictionary 來解決
+//--------------------------------------------------------
+
 function sameFrequency(str1, str2){
     // 將兩個 str 換成 array
     let arr1 = str1.split("") // 將字符串 str1 分割成單個字符的數組 arr1。
@@ -39,4 +60,6 @@ function sameFrequency(str1, str2){
     return true; // 如果所有字符的計數都相同，則返回 true。
 }
 
+
 console.log(sameFrequency("aabc", "abbc")); // 輸出比較 "aabc" 和 "abbc" 是否有相同的字符頻率。
+console.log(sameFrequency("aabc", "baac")); // 輸出比較 "aabc" 和 "abbc" 是否有相同的字符頻率。
